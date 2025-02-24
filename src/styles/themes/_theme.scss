@@ -1,0 +1,25 @@
+@use '@/styles/abstracts/variables' as *;
+
+:root {
+	--background-body: #{$bg-color-light};
+	--background-fields: #{$bg-fields-color-light};
+	--background-button: #{$bg-button-color-light};
+	--color-primary: #{$primary-color-light};
+	--color-secondary: #{$secondary-color-light};
+	--border-color: #{$border-color-light};
+	--background-sidebar: #{$bg-sidebar-light};
+	--box-shadow: #{$box-shadow-light};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-body: #{$bg-color-dark};
+		--background-fields: #{$bg-fields-color-dark};
+		--background-button: #{$bg-button-color-dark};
+		--color-primary: #{$primary-color-dark};
+		--color-secondary: #{$secondary-color-dark};
+		--border-color: #{$border-color-dark};
+		--background-sidebar: #{$bg-sidebar-dark};
+		--box-shadow: #{$box-shadow-dark};
+	}
+}

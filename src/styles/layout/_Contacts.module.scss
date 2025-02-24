@@ -1,0 +1,80 @@
+@use '@/styles/abstracts/mixins/media-query' as *;
+
+.contacts {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	max-width: 700px;
+	width: 100%;
+	gap: 60px;
+
+	&__title {
+		font-size: clamp(20px, 4vw + 1rem, 45px);
+		font-family: 'Inter-bold';
+	}
+
+	div {
+		width: 100%;
+		opacity: 0;
+		transform: translateY(10px) scale(0.9);
+		transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+		@include breakpoint-down('lg') {
+			opacity: 1 !important;
+			transform: translateY(0) scale(1) !important;
+			transition: none !important;
+		}
+
+		&.visible {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+			transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+		}
+	}
+
+	form {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		border: 1px solid var(--border-color);
+		width: 100%;
+		border-radius: 10px;
+		padding: 20px;
+		gap: 10px;
+
+		label {
+			font-size: 18px;
+			font-family: 'Inter-bold';
+		}
+
+		input,
+		textarea {
+			border: 1px solid var(--border-color);
+			border-radius: 10px;
+			padding: 15px;
+			width: 100%;
+			margin-bottom: 10px;
+			resize: vertical;
+			font-size: 18px;
+		}
+
+		textarea {
+			min-height: 80px;
+		}
+	}
+	&__btn {
+		width: 100%;
+		padding: 10px;
+		border-radius: 10px;
+		background-color: var(--background-button);
+		color: var(--background-body);
+		font-size: clamp(16px, 1.5vw + 0.5rem, 18px);
+		border-color: var(--border-color);
+		transition: 0.3s opacity ease-in;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

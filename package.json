@@ -1,0 +1,74 @@
+{
+	"name": "webpack-config",
+	"packageManager": "yarn@4.5.2",
+	"scripts": {
+		"start": "webpack serve --env mode=development",
+		"analyzer": "webpack --env mode=production",
+		"build:dev": "webpack --env mode=development",
+		"build:prod": "webpack --env mode=production --env analyzer=true",
+		"deploy": "gh-pages -d dist"
+	},
+	"devDependencies": {
+		"@emailjs/browser": "^4.4.1",
+		"@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+		"@svgr/webpack": "^8.1.0",
+		"@swc/core": "^1.10.16",
+		"@types/dotenv-webpack": "^7.0.8",
+		"@types/gh-pages": "^6",
+		"@types/node": "^22.13.1",
+		"@types/react": "^19.0.8",
+		"@types/react-dom": "^19.0.3",
+		"@types/react-refresh": "^0",
+		"@types/react-transition-group": "^4",
+		"@types/webpack": "^5.28.5",
+		"@types/webpack-bundle-analyzer": "^4",
+		"@types/webpack-dev-server": "^4.7.2",
+		"copy-webpack-plugin": "^12.0.2",
+		"css-loader": "^7.1.2",
+		"cssnano": "^7.0.6",
+		"dotenv-webpack": "^8.1.0",
+		"fork-ts-checker-webpack-plugin": "^9.0.2",
+		"gh-pages": "^6.3.0",
+		"html-webpack-plugin": "^5.6.3",
+		"mini-css-extract-plugin": "^2.9.2",
+		"postcss": "^8.5.2",
+		"postcss-loader": "^8.1.1",
+		"postcss-merge-rules": "^7.0.4",
+		"postcss-preset-env": "^10.1.4",
+		"react-refresh": "^0.16.0",
+		"sass": "^1.84.0",
+		"sass-loader": "^16.0.4",
+		"style-loader": "^4.0.0",
+		"swc-loader": "^0.2.6",
+		"ts-loader": "^9.5.2",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.3",
+		"webpack": "^5.97.1",
+		"webpack-bundle-analyzer": "^4.10.2",
+		"webpack-cli": "^6.0.1",
+		"webpack-dev-server": "^5.2.0"
+	},
+	"dependencies": {
+		"emailjs-com": "^3.2.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-router": "^7.2.0",
+		"react-transition-group": "^4.4.5"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all",
+			"last 2 versions",
+			"iOS >= 12",
+			"Safari >= 12",
+			"not ie <= 11"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}

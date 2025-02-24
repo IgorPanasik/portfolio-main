@@ -1,0 +1,38 @@
+@use '@/styles/abstracts/mixins/media-query' as *;
+
+.notification {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 300px;
+	width: 100%;
+	line-height: 1.1;
+	padding: 10px 15px;
+	border-radius: 4px;
+	top: 70px;
+	right: 20px;
+	font-size: 14px;
+	color: #e9e3e3;
+	z-index: 1000;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	font-family: 'Inter-bold';
+
+	@include breakpoint-down('xs') {
+		left: 20px;
+		right: 20px;
+	}
+}
+
+i[class*='fa-circle-exclamation'],
+i[class*='fa-circle-check'] {
+	margin-right: 5px;
+}
+
+.success {
+	background-color: #158015;
+}
+
+.error {
+	background-color: #b30c0c;
+}
