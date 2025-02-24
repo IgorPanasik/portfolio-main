@@ -7,7 +7,7 @@ export interface INotification {
 	type: NotificationType;
 }
 
-export const Notification = ({ message, type }: INotification) => {
+export default function Notification({ message, type }: INotification) {
 	return (
 		<p
 			className={`${styles.notification} ${
@@ -22,4 +22,4 @@ export const Notification = ({ message, type }: INotification) => {
 			{message}
 		</p>
 	);
-};
+}

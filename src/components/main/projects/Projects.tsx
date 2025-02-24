@@ -2,7 +2,7 @@ import { projects } from '@/services/projects';
 import * as styles from '@/styles/layout/_Projects.module.scss';
 import { useEffect, useRef, useState } from 'react';
 
-export const Projects = () => {
+export default function Projects() {
 	const [visibleProjects, setVisibleProjects] = useState(6);
 
 	const projectRefs = useRef<(HTMLLIElement | null)[]>([]);
@@ -102,4 +102,4 @@ export const Projects = () => {
 			</div>
 		</section>
 	);
-};
+}

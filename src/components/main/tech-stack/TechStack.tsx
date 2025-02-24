@@ -2,7 +2,7 @@ import { techCategories } from '@/services/techCategories';
 import * as styles from '@/styles/layout/_Tech-Stack.module.scss';
 import { useEffect, useRef } from 'react';
 
-export const TechStack = () => {
+export default function TechStack() {
 	const techRefs = useRef<(HTMLDivElement | null)[]>([]);
 
 	useEffect(() => {
@@ -59,4 +59,4 @@ export const TechStack = () => {
 			</div>
 		</section>
 	);
-};
+}

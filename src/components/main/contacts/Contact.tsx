@@ -6,7 +6,7 @@ import * as styles from '@/styles/layout/_Contacts.module.scss';
 import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
 
-export const Contact = () => {
+export default function Contact() {
 	const [notification, setNotification] = useState<INotification | null>(null);
 	const form = useRef<HTMLFormElement | null>(null);
 	const formContainerRef = useRef<HTMLDivElement | null>(null);
@@ -127,4 +127,4 @@ export const Contact = () => {
 			</div>
 		</section>
 	);
-};
+}

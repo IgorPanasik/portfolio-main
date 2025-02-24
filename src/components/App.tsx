@@ -1,5 +1,5 @@
 import '@/styles/main.scss';
-import Footer from './footer/Footer';
+import { Footer } from './footer/index';
 import Header from './header/Header';
 import Main from './main/Content';
 

@@ -1,7 +1,7 @@
 import { About } from './about/About';
-import { Contact } from './contacts/Contact';
-import { Projects } from './projects/Projects';
-import { TechStack } from './tech-stack/TechStack';
+import { Contact } from './contacts/index';
+import { Projects } from './projects/index';
+import { TechStack } from './tech-stack/index';
 
 export default function Content() {
 	return (
