@@ -5,7 +5,7 @@ export const Logo = () => {
 		<div className={styles.header__logo}>
 			<a
 				className={styles['header__logo-link']}
-				href='/'
+				href='https://igorpanasik.github.io/portfolio-main/'
 				rel='noopener noreferrer'
 			>
 				Panasik<span className={styles['header__logo-divider']}>|</span>Igor
