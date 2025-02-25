@@ -66,7 +66,8 @@ export const Nav = ({
 		const nav = navRef.current;
 		if (!nav) return;
 		const handleTouch = (e: TouchEvent) => {
-			if (nav.contains(e.target as Node)) {
+			const target = e.target as HTMLElement;
+			if (nav.contains(target) && target.tagName !== 'A') {
 				e.preventDefault();
 			}
 		};

@@ -115,7 +115,6 @@
 			z-index: 10;
 			transition: right 0.3s ease-out;
 			overflow: hidden;
-
 			padding-top: 70px;
 		}
 
@@ -227,14 +226,14 @@
 
 			.chevron {
 				color: #d60707;
-				font-size: 16px;
-				transform: rotate(180deg);
-				transform-origin: 50% 55%;
+				font-size: 14px;
+				transform: rotate(0);
+				transform-origin: 50% 52%;
 				transition: transform 0.3s ease;
 			}
 
 			.chevron-rotate {
-				transform: rotate(0);
+				transform: rotate(180deg);
 			}
 		}
 	}

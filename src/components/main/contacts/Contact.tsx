@@ -23,14 +23,14 @@ export default function Contact() {
 		const message = formData.get('message')?.toString().trim() || '';
 
 		if (name.length < 2) {
-			errors.push('Имя должно быть не менее 2 символов.');
+			errors.push('Name must be at least 2 characters.');
 		}
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		if (!emailRegex.test(email)) {
-			errors.push('Неверный формат email. example@mail.com.');
+			errors.push('Invalid email format. example@mail.com.');
 		}
 		if (message.length < 10) {
-			errors.push('Сообщение должно быть не менее 10 символов.');
+			errors.push('Message must be at least 10 characters.');
 		}
 		return errors;
 	};
@@ -48,14 +48,14 @@ export default function Contact() {
 			emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
 				result => {
 					setNotification({
-						message: 'Email успешно отправлен!',
+						message: 'Email sent successfully!',
 						type: 'success',
 					});
 					form.current?.reset();
 				},
 				error => {
 					setNotification({
-						message: 'Ошибка при отправке email. Попробуйте ещё раз.',
+						message: 'Error sending email. Try again.',
 						type: 'error',
 					});
 					form.current?.reset();
@@ -104,9 +104,13 @@ export default function Contact() {
 	return (
 		<section id='contacts' className={`${styles.contacts} container section`}>
 			<h2 className={styles.contacts__title}>Get in Touch</h2>
-			{notification && (
-				<Notification message={notification.message} type={notification.type} />
-			)}
+
+			<Notification
+				notification={notification !== null}
+				message={notification?.message || ''}
+				type={notification?.type || 'error'}
+			/>
+
 			<div ref={formContainerRef}>
 				<form ref={form} onSubmit={handleOnSubmit}>
 					<label htmlFor='name'>Name</label>

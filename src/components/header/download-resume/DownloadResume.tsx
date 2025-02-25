@@ -77,7 +77,7 @@ export const DownloadResume = ({
 					} `}
 					aria-hidden='true'
 				>
-					&#128710;
+					<i className='fa-solid fa-chevron-down'></i>
 				</span>
 			</button>
 			<CSSTransition
