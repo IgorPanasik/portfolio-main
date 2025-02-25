@@ -1,7 +1,5 @@
-import {
-	INotification,
-	Notification,
-} from '@/components/notification/Notification';
+import { INotification } from '@/components/notification/Notification';
+import { Notification } from '@/components/notification/index';
 import * as styles from '@/styles/layout/_Contacts.module.scss';
 import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
