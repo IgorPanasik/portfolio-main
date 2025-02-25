@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebpack_config=self.webpackChunkwebpack_config||[]).push([[211],{211:function(e,n,a){a.r(n),a.d(n,{default:function(){return r}});var c=a(848);function r(){var e=new Date;return(0,c.jsx)("footer",{className:"container",children:(0,c.jsxs)("p",{className:"footer-text",children:["© ",e.getFullYear()," Panasik|Igor.dev"]})})}}}]);
